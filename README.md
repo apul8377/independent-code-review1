@@ -12,7 +12,7 @@ This application was written by Alex Pulvers
 
 **Setup**
 ==========================================================================================================
-1. go to <a href="https://github.com/apul8377/independent-code-review1"></a> and clone a copy to your desktop.
+1. go <a href="https://github.com/apul8377/independent-code-review1">here</a> and clone a copy to your desktop.
 2. open index.html with your browser (chrome or firefox preferred).
 3. enter the number you wish to see BeepBooperized in the text box.
 4. press enter.
