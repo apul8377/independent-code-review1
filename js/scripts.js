@@ -9,9 +9,9 @@ function replace(userInput) {
   if (str.includes("3") || str.includes("2") || str.includes("1")) {
     newStr = str
       .toString()
-      .replace(/\/d3|3/g, "Won't you be my neighbor?")
-      .replace(/\/d2|2/g, "Beep!")
-      .replace(/\/d1|1/g, "Boop!");
+      .replace(/3*/g, "Won't you be my neighbor?")
+      .replace(/2*/g, "Beep!")
+      .replace(/1*/g, "Boop!");
   }
   return newStr;
 }
