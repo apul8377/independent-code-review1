@@ -1,22 +1,19 @@
 //Business logic
 
 function replace(userInput) {
-  str = [];
+  const str = [];
+  let newStr = [];
   for (i = 0; i <= userInput; i++) {
-    str.push(i);
-    let newStr = str;
-    // if (str.includes(3) == 1) {
-    //   str.splice(3, 1, "Won't you be my neighbor?");
-    // }
-    // if (str.includes(2) == 1) {
-    //   str.splice(2, 1, "Beep!");
-    // }
-    // if (str.includes(1) == 1) {
-    //   str.splice(1, 1, "Boop!");
-    // }
-
-    return str;
+    str[i] = i.toString();
   }
+  if (str.includes("3") || str.includes("2") || str.includes("1")) {
+    newStr = str
+      .toString()
+      .replace(/[3]/g, "Won't you be my neighbor?")
+      .replace(/\d[2]/g, "Beep!")
+      .replace(/\d[1]/g, "Boop!");
+  }
+  return newStr;
 }
 
 //User Interface Logic
