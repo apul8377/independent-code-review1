@@ -1,15 +1,12 @@
-
-.container{
-  width: 1920px;
+.container {
+  width: flex;
   text-align: center;
   border: 10px solid aquamarine;
   border-top-style: groove;
   border-bottom-style: groove;
   background-color: rgb(199, 253, 253);
 }
-.style{
+.style {
   height: 500px;
   width: 1000px;
 }
-
-
