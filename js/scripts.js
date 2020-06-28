@@ -7,12 +7,17 @@ function replace(userInput) {
     str[i] = i.toString();
   }
 
-  if (str.includes("3") || str.includes("2") || str.includes("1")) {
-    newStr = str
-      .toString()
-      .replace(/3/g, "Won't you be my neighbor?")
-      .replace(/2/g, "Beep!")
-      .replace(/1/g, "Boop!");
+  for (let i = 0; i < str.length; i++) {
+    let number = str[i];
+    if (number.includes("3")) {
+      newStr.push("Won't you be my neighbor?");
+    } else if (number.includes("2")) {
+      newStr.push("Beep!");
+    } else if (number.includes("1")) {
+      newStr.push("Boop!");
+    } else {
+      newStr.push(number);
+    }
   }
   return newStr;
 }
@@ -21,13 +26,11 @@ function replace(userInput) {
 $("document").ready(function () {
   $("form#userInput").submit(function (event) {
     event.preventDefault();
-    inputValue = $("input#userNumber").val();
+    let inputValue = $("input#userNumber").val();
     let stringReplaced = replace(inputValue);
     console.log(stringReplaced);
-    output = [];
-    output += stringReplaced;
 
-    $("#outputText").text(output);
+    $("#outputText").text(stringReplaced);
     $("input#userNumber").val(" ");
 
     if (inputValue >= 999 || inputValue <= 0) {
